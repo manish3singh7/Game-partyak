@@ -24,20 +24,17 @@ const scenes = [
 
     {
 
-        chapter: "PROLOGUE",
+        chapter: "INTRODUCTION",
 
         emoji: "🏛️",
 
-        title: "The Letter",
+        title: "Welcome To Harrapan Civilisation",
 
         text:
-        `Pataliputra is beginning to wake.
-
-        Your mentor gives you a sealed letter.
-
-        "Deliver this before sunset."
-
-        You don't know what lies ahead.`,
+            "DID YOU KNOW?: The Harappans had a writing system that has not yet been fully deciphered!"
+        ,
+        // Qs:
+        //     "",
 
         choices: [
 
@@ -56,41 +53,100 @@ const scenes = [
 
         chapter: "CHAPTER I",
 
-        emoji: "🏙️",
+        emoji: "🏺",
 
-        title: "The City",
+        title: "🏺Harappan Civilization — Fact + Quiz",
 
         text:
-        `The streets of Pataliputra are alive.
-
-        Merchants call out to customers.
-        Artisans work in their workshops.
-        Students gather around their teachers.
-
-        Where will you go?`,
+            "Fact: Harappan cities were remarkably well planned for their time. Many settlements had straight streets, standardized brick sizes, wells, houses, and organized drainage systems. ",
 
         choices: [
 
             {
-                text: "Visit the marketplace",
+                text: "Next",
                 effects: {
-                    prosperity: 10
+
                 },
                 next: 2
+
             },
 
+
+        ]
+
+    },
+
+
+    {
+
+        chapter: "CHAPTER I",
+
+        emoji: "🪙",
+
+        title: "❓ Quiz:",
+
+        text:
+            "Which feature is especially associated with Harappan urban planning?",
+
+        choices: [
+
             {
-                text: "Visit an artisan",
+                text: "	A. Sophisticated drainage systems",
+                isCorrect: true,
                 effects: {
-                    culture: 10
+
+                },
+                next: 3
+
+            },
+            {
+                text: "B. Giant stone pyramids",
+                isCorrect: false,
+                effects: {
+
+                },
+                next: 3
+
+            },
+            {
+                text: "C. Roman-style amphitheaters",
+                isCorrect: false,
+                effects: {
+
                 },
                 next: 3
             },
+            {
+                text: "D. Medieval castles",
+                isCorrect: false,
+                effects: {
+
+                },
+                next: 3
+            }
+
+        ]
+
+    },
+
+
+    {
+
+        chapter: "CHAPTER I",
+
+        emoji: "📜",
+
+        title: "📜Fact:🚿 The Great Bath",
+
+        text:
+            "The Great Bath at Mohenjo-daro is a large, carefully constructed brick-lined structure. Its exact purpose is unknown, but it may have had ritual or ceremonial significance.",
+
+        choices: [
 
             {
-                text: "Visit a scholar",
+                text: "NEXT",
                 effects: {
-                    knowledge: 10
+                    // culture: 15
                 },
                 next: 4
             }
@@ -104,25 +160,43 @@ const scenes = [
 
         chapter: "CHAPTER I",
 
-        emoji: "🪙",
+        emoji: "❓",
 
-        title: "The Marketplace",
+        title: "The Quiz",
 
         text:
-        `A merchant explains how goods
-        travel between different regions.
-
-        "Trade carries more than goods,"
-        he tells you.
-        "It carries ideas too."`,
+            "Where is the famous Great Bath located?",
 
         choices: [
 
             {
-                text: "Thank the merchant and continue",
+                text: "A. Harappa",
                 effects: {
-                    knowledge: 10,
-                    prosperity: 5
+                    // integrity: -5
+                },
+                next: 5
+            },
+
+            {
+                text: "B. Mohenjo-daro",
+                effects: {
+                    // knowledge: 15,
+                    // integrity: 5
+                },
+                next: 5
+            },
+
+            {
+                text: "C. Lothal",
+                effects: {
+                    // prosperity: 10
+                },
+                next: 5
+            },
+            {
+                text: "D. Rakhigarhi",
+                effects: {
+                    // prosperity: 10
                 },
                 next: 5
             }
@@ -136,97 +210,17 @@ const scenes = [
 
         chapter: "CHAPTER I",
 
-        emoji: "🏺",
+        emoji: " 📜",
 
-        title: "The Artisan",
+        title: "The Mysterious Script 📜",
 
         text:
-        `An artisan carefully shapes a clay pot.
-
-        "Kings may build palaces,"
-        he says,
-        "but ordinary people build
-        the culture that fills them."`,
+            "Harappan people used symbols that appear on seals, pottery, tablets, and other objects. Despite decades of research, the Harappan script has not been conclusively deciphered.",
 
         choices: [
 
             {
-                text: "Admire the craftsmanship",
-                effects: {
-                    culture: 15
-                },
-                next: 5
-            }
-
-        ]
-
-    },
-
-
-    {
-
-        chapter: "CHAPTER I",
-
-        emoji: "📚",
-
-        title: "The Scholar",
-
-        text:
-        `A scholar asks you:
-
-        "What makes a civilization strong?"`,
-
-        choices: [
-
-            {
-                text: "Only its army",
-                effects: {
-                    integrity: -5
-                },
-                next: 5
-            },
-
-            {
-                text: "Knowledge and cooperation",
-                effects: {
-                    knowledge: 15,
-                    integrity: 5
-                },
-                next: 5
-            },
-
-            {
-                text: "Gold",
-                effects: {
-                    prosperity: 10
-                },
-                next: 5
-            }
-
-        ]
-
-    },
-
-
-    {
-
-        chapter: "CHAPTER II",
-
-        emoji: "🌾",
-
-        title: "The Fields",
-
-        text:
-        `Outside the city, farmers are struggling
-        to distribute water to their fields.
-
-        Your journey is already taking longer
-        than expected.`,
-
-        choices: [
-
-            {
-                text: "Help repair the irrigation channel",
+                text: "NEXT",
 
                 effects: {
                     nature: 10,
@@ -234,26 +228,7 @@ const scenes = [
                 },
 
                 next: 6
-            },
 
-            {
-                text: "Continue your journey",
-
-                effects: {
-                    prosperity: 5
-                },
-
-                next: 6
-            },
-
-            {
-                text: "Ask the village elder",
-
-                effects: {
-                    knowledge: 10
-                },
-
-                next: 6
             }
 
         ]
@@ -263,23 +238,20 @@ const scenes = [
 
     {
 
-        chapter: "CHAPTER III",
+        chapter: "CHAPTER I",
 
-        emoji: "🏪",
+        emoji: "📜 ",
 
-        title: "The Merchant's Offer",
+
+        title: "❓ Quiz:",
 
         text:
-        `A merchant has accidentally received goods
-        belonging to someone else.
-
-        He quietly offers you gold
-        to keep the mistake secret.`,
+            "What is the current status of the Harappan script?",
 
         choices: [
 
             {
-                text: "Accept the gold",
+                text: "•	A. Completely deciphered",
 
                 effects: {
                     prosperity: 20,
@@ -290,7 +262,7 @@ const scenes = [
             },
 
             {
-                text: "Tell him to return the goods",
+                text: "•	B. Partially translated into Greek",
 
                 effects: {
                     integrity: 15
@@ -300,7 +272,17 @@ const scenes = [
             },
 
             {
-                text: "Find the rightful owner",
+                text: "•	C. Still undeciphered",
+
+                effects: {
+                    integrity: 20,
+                    knowledge: 5
+                },
+
+                next: 7
+            },
+            {
+                text: "•	D. Written entirely in Sanskrit",
 
                 effects: {
                     integrity: 20,
@@ -317,49 +299,27 @@ const scenes = [
 
     {
 
-        chapter: "CHAPTER IV",
+        chapter: "CHAPTER I",
 
-        emoji: "📖",
+        emoji: "🐂",
 
-        title: "The Scholar's Question",
+        title: "📜 Fact:",
 
         text:
-        `A scholar studying mathematics and astronomy
-        asks you:
-
-        "Why should knowledge be preserved?"`,
+            "Harappan seals are often made from steatite and feature animals and short inscriptions. One of the most famous motifs is a mysterious one-horned animal often called the “unicorn.”",
 
         choices: [
 
             {
-                text: "To become powerful",
+                text: "NEXT",
 
                 effects: {
-                    prosperity: 5
+
+
                 },
-
                 next: 8
-            },
 
-            {
-                text: "To understand the world",
 
-                effects: {
-                    knowledge: 15
-                },
-
-                next: 8
-            },
-
-            {
-                text: "To share it with future generations",
-
-                effects: {
-                    knowledge: 20,
-                    culture: 5
-                },
-
-                next: 8
             }
 
         ]
@@ -369,24 +329,19 @@ const scenes = [
 
     {
 
-        chapter: "CHAPTER V",
+        chapter: "CHAPTER I",
 
-        emoji: "🌳",
+        emoji: "💧 ",
 
-        title: "The Forest",
+        title: "❓ Quiz:",
 
         text:
-        `Near the eastern road,
-        you see travelers cutting trees.
-
-        You have little time left.
-
-        What will you do?`,
+            " Which Harappan site is particularly famous for its water-management system?",
 
         choices: [
 
             {
-                text: "Ignore them",
+                text: "•	A. Dholavira",
 
                 effects: {},
 
@@ -394,7 +349,7 @@ const scenes = [
             },
 
             {
-                text: "Ask them to stop",
+                text: "•	B. Taxila",
 
                 effects: {
                     nature: 20
@@ -404,7 +359,17 @@ const scenes = [
             },
 
             {
-                text: "Speak with the local community",
+                text: "•	C. Sarnath",
+
+                effects: {
+                    nature: 15,
+                    knowledge: 10
+                },
+
+                next: 9
+            },
+            {
+                text: "•	D. Pataliputra",
 
                 effects: {
                     nature: 15,
@@ -421,66 +386,21 @@ const scenes = [
 
     {
 
-        chapter: "FINAL",
+        chapter: "CHAPTER I",
 
-        emoji: "🌅",
+        emoji: "⚖️ ",
 
-        title: "The Eastern Gate",
+        title: "📜 Fact:",
 
         text:
-        `You finally reach the eastern gate.
-
-        Your mentor takes the letter.
-
-        He opens it.
-
-        The paper is completely blank.
-
-        "The letter was never the lesson."
-
-        He looks at you.
-
-        "What makes a civilization great?"`,
+            "Harappan sites have yielded sets of carefully standardized weights. Such standardization would have helped with trade and measuring goods.",
 
         choices: [
 
             {
-                text: "Prosperity",
+                text: "NEXT",
 
-                effects: {
-                    prosperity: 10
-                },
 
-                next: 10
-            },
-
-            {
-                text: "Knowledge",
-
-                effects: {
-                    knowledge: 10
-                },
-
-                next: 10
-            },
-
-            {
-                text: "Culture and heritage",
-
-                effects: {
-                    culture: 10
-                },
-
-                next: 10
-            },
-
-            {
-                text: "Balance between people and nature",
-
-                effects: {
-                    nature: 10,
-                    integrity: 10
-                },
 
                 next: 10
             }
@@ -513,8 +433,11 @@ function showScene() {
         .textContent = scene.title;
 
 
-    document.getElementById("storyText")
+    document.getElementById("storytext")
         .textContent = scene.text;
+
+    // document.getElementById("dyk")
+    //     .textContent = scene.Qs;
 
 
     const choices =
@@ -533,9 +456,7 @@ function showScene() {
         button.textContent =
             choice.text;
 
-
-        button.onclick =
-            () => makeChoice(index);
+        button.onclick = () => makeChoice(index, button);
 
 
         choices.appendChild(button);
@@ -686,7 +607,7 @@ function showEnding() {
     else {
 
         title =
-            "🪙 THE PROSPEROUS BUILDER";
+            "💎 Harappan Craftsmanship";
 
         text =
             `You focused on prosperity
@@ -703,7 +624,7 @@ function showEnding() {
 
 
     document.getElementById("sceneEmoji")
-        .textContent = "🏆";
+        .textContent = "💎 ";
 
 
     document.getElementById("title")
@@ -731,3 +652,58 @@ function showEnding() {
 */
 
 showScene();
+// function checkAnswer(event, iscorrect) {
+//     const clickButton = event.target;
+//     if (iscorrect) {
+//         if (isCorrect) {
+//             clickButton.style.backgroundColor = "green";
+//             clickButton.style.color = "white"; // Makes the text easier to read
+//         } else {
+//             clickButton.style.backgroundColor = "red";
+//             clickButton.style.color = "white";
+//         }
+
+//     }
+// }
+// checkAnswer();
+function makeChoice(index, clickedButton) {
+    const choice = scenes[currentScene].choices[index];
+
+    // Disable all buttons to prevent spamming
+    const allButtons = document.querySelectorAll("#choices button");
+    allButtons.forEach(btn => btn.disabled = true);
+
+    // If choice has isCorrect defined, apply feedback color
+    if (choice.isCorrect !== undefined) {
+        if (choice.isCorrect) {
+            clickedButton.style.backgroundColor = "#2e7d32"; // Green
+            clickedButton.style.color = "white";
+        } else {
+            clickedButton.style.backgroundColor = "#c62828"; // Red
+            clickedButton.style.color = "white";
+        }
+    }
+
+    // Apply effects
+    for (let stat in choice.effects) {
+        stats[stat] += choice.effects[stat];
+    }
+
+    // Clamp stats between 0 and 100
+    for (let stat in stats) {
+        stats[stat] = Math.max(0, Math.min(100, stats[stat]));
+    }
+
+    currentScene = choice.next;
+
+    // Add a short delay (700ms) so the player can see the color before transitioning
+    const delay = choice.isCorrect !== undefined ? 700 : 0;
+
+    setTimeout(() => {
+        if (currentScene >= scenes.length) {
+            showEnding();
+        } else {
+            showScene();
+        }
+    }, delay);
+}
