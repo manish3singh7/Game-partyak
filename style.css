@@ -29,7 +29,11 @@ main {
     max-width: 850px;
     margin: 25px auto;
 }
-
+.logo{
+    position: relative;
+    left: -10px;
+    bottom: -10px;
+}
 
 
 
@@ -176,3 +180,6 @@ footer pre {
     }
 
 }
+/* .correct{
+    
+} */
